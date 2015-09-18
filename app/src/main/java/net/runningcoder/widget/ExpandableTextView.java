@@ -3,15 +3,13 @@ package net.runningcoder.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
-import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.runningcoder.R;
@@ -20,7 +18,7 @@ import net.runningcoder.util.L;
 /**
  * TODO: document your custom view class.
  */
-public class ExpandableTextView extends LinearLayout implements View.OnClickListener {
+public class ExpandableTextView extends RelativeLayout implements View.OnClickListener {
     private final int MODEL_EXPAND = 1;
     private final int MODEL_COLLAPSE = 0;
 
@@ -34,10 +32,10 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
     private int mEndHeight;
     private Drawable mExpandIcon;
     private Drawable mCollapseIcon;
-    private TextPaint mTextPaint;
     private TextView tv;
     private ImageView img;
     ExpandCollapseAnimation animation = null;
+    private int lineCount;
 
     public ExpandableTextView(Context context) {
         super(context);
@@ -84,13 +82,8 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 
         a.recycle();
 
-        // Set up a default TextPaint object
-        mTextPaint = new TextPaint();
-        mTextPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
-        mTextPaint.setTextAlign(Paint.Align.LEFT);
-        setOrientation(LinearLayout.VERTICAL);
-        // Update TextPaint and text measurements from attributes
-        invalidateTextPaintAndMeasurements();
+//        setOrientation(LinearLayout.VERTICAL);
+
 
     }
 
@@ -102,30 +95,47 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 
     private void initViews() {
         tv = new TextView(getContext());
+        tv.setId(111);
         tv.setText(text);
-        tv.setLines(lines);
+        tv.setMaxLines(lines);
+
+        tv.post(new Runnable() {
+            @Override
+            public void run() {
+                lineCount = tv.getLineCount();
+                L.i("lineCount :" + lineCount);
+                if (lineCount > lines) {
+                    addImg();
+                }
+
+            }
+        });
+        LayoutParams tvLp = new LayoutParams(
+                LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        tvLp.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        tv.setLayoutParams(tvLp);
+        tv.setOnClickListener(this);
         this.addView(tv);
-        L.i("getLineCount ->" + tv.getLineCount());
+
+    }
+
+    private void addImg() {
 
         img = new ImageView(getContext());
+
+        LayoutParams imgLp = new LayoutParams(40,40);
+        imgLp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        imgLp.addRule(RelativeLayout.BELOW,tv.getId());
+        imgLp.rightMargin = 30;
+        img.setLayoutParams(imgLp);
+
         if(mCurrentModel == MODEL_EXPAND){
             img.setImageDrawable(mExpandIcon);
         }else {
             img.setImageDrawable(mCollapseIcon);
         }
 
-        img.setOnClickListener(this);
-        addView(img);
-
-    }
-
-
-    private void invalidateTextPaintAndMeasurements() {
-        mTextPaint.setTextSize(mTextSize);
-        mTextPaint.setColor(mTextColor);
-
-        Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
-//        mTextHeight = fontMetrics.bottom;
+        this.addView(img);
     }
 
     @Override
@@ -133,7 +143,9 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 
         if(mCurrentModel == MODEL_EXPAND){
             animation = new ExpandCollapseAnimation(tv,MODEL_EXPAND);
-            img.setImageDrawable(mCollapseIcon);
+            if(img != null){
+                img.setImageDrawable(mCollapseIcon);
+            }
             mCurrentModel = MODEL_COLLAPSE;
 //            animation.setAnimationListener(new Animation.AnimationListener() {
 //                @Override
@@ -163,7 +175,10 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
                 @Override
                 public void onAnimationEnd(Animation animation) {
                     mCurrentModel = MODEL_EXPAND;
-                    img.setImageDrawable(mExpandIcon);
+                    if(img != null){
+                        img.setImageDrawable(mExpandIcon);
+                    }
+
                 }
 
                 @Override
@@ -172,7 +187,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
                 }
             });
 
-            tv.setLines(lines);
+            tv.setMaxLines(lines);
         }
         tv.startAnimation(animation);
         tv.requestLayout();
@@ -191,7 +206,8 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
             mEndHeight = tv.getLayout().getLineTop(tv.getLineCount())+tv.getCompoundPaddingBottom()
                     +tv.getCompoundPaddingTop();
         }
-        L.i("mCurrentModel:"+mCurrentModel+" onMeasure  mStartHeight:"+mStartHeight);
+
+        L.i("onMeasure   mCurrentModel:"+mCurrentModel+" onMeasure  mStartHeight:"+mStartHeight);
 
     }
 
@@ -205,7 +221,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
      */
     public void setText(String exampleString) {
         text = exampleString;
-        invalidateTextPaintAndMeasurements();
+        tv.setText(text);
     }
 
 
@@ -217,7 +233,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
      */
     public void setTextColor(int exampleColor) {
         mTextColor = exampleColor;
-        invalidateTextPaintAndMeasurements();
+        tv.setTextColor(mTextColor);
     }
 
 
@@ -229,7 +245,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
      */
     public void setTextSize(float exampleDimension) {
         mTextSize = exampleDimension;
-        invalidateTextPaintAndMeasurements();
+        tv.setTextSize(mTextSize);
     }
 
 
@@ -247,7 +263,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
         private TextView mAnimatedView;
 
         private int mType;
-        private LinearLayout.LayoutParams mLayoutParams;
+        private RelativeLayout.LayoutParams mLayoutParams;
 
         /**
          * Initializes expand collapse animation, has two types, collapse (1) and expand (0).
@@ -263,7 +279,7 @@ public class ExpandableTextView extends LinearLayout implements View.OnClickList
 //            mStartHeight = mAnimatedView.getLineHeight()*lines+tv.getCompoundPaddingBottom()
 //                    +tv.getCompoundPaddingTop();
 
-            mLayoutParams = ((LinearLayout.LayoutParams) view.getLayoutParams());
+            mLayoutParams = ((RelativeLayout.LayoutParams) view.getLayoutParams());
             mType = type;
 
             view.setVisibility(View.VISIBLE);

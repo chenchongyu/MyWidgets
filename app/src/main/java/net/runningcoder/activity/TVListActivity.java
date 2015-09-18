@@ -1,6 +1,5 @@
 package net.runningcoder.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,52 +10,48 @@ import android.view.View;
 
 import net.runningcoder.BasicActivity;
 import net.runningcoder.R;
-import net.runningcoder.adapter.MainAdapter;
-import net.runningcoder.bean.WidgetItem;
+import net.runningcoder.adapter.TVListAdapter;
 import net.runningcoder.listener.OnItemClickForRecycler;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BasicActivity implements OnItemClickForRecycler{
+public class TVListActivity extends BasicActivity {
 
     private RecyclerView recyclerView;
-    private MainAdapter adapter;
-    private List<WidgetItem> list = new ArrayList<WidgetItem>();
+    private TVListAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initView();
-        initData();
-    }
+        List<String> list = new ArrayList<>(5);
+        list.add("在很多时候xml里面的布局并不能满足我们的需求。这时候就需要用代码进行动态布局，前些天在对RelativeLayout 进行动态布局时遇到了些问题，现在解决了，分享下。");
+        list.add("人生自古谁无死，留取丹心照汗青");
+        list.add("我们经常会遇到让控件或是view实现叠加的效果,一般...不如RelativeLayout。");
+        list.add("private RecyclerView recyclerView;在很多时候xml里面的布局并不能满足我们的需求。这时候就需要用代码进行动态布局，前些天在对RelativeLayout 进行动态布局时遇到了些问题，现在解决了，分享下。");
 
-    private void initData() {
-        list.add(new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"));
-        list.add(new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"));
-        adapter.notifyDataSetChanged();
-    }
-
-    private void initView() {
-        setTitle(R.string.title_activity_main);
-        recyclerView = (RecyclerView) findViewById(R.id.v_recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.v_recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        adapter = new MainAdapter(list,this);
+        adapter = new TVListAdapter(list, new OnItemClickForRecycler() {
+            @Override
+            public void onItemClick(View v, int position) {
+//                L.i(list.get(position));
+            }
+        });
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
 
     @Override
     public int getContentViewID() {
-        return R.layout.activity_main;
+        return R.layout.activity_tvlist;
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_tv_list, menu);
         return true;
     }
 
@@ -73,24 +68,5 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    public void onItemClick(View v, int position) {
-        WidgetItem item = list.get(position);
-        Intent intent = null;
-        switch (item.id){
-            case 1:
-                intent = new Intent(this, ExpandTextViewActivity.class);
-                intent.putExtra("title", item.name);
-
-                break;
-            case 2:
-                intent = new Intent(this, TVListActivity.class);
-                intent.putExtra("title", item.name);
-                break;
-        }
-        startActivity(intent);
     }
 }

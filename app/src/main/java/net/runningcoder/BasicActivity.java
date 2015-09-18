@@ -1,6 +1,5 @@
 package net.runningcoder;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-public abstract class BasicActivity extends Activity {
+public abstract class BasicActivity extends ActionBarActivity {
 	public static final String ACTION_EXIT = RunningCodeApplication.getInstance().getPackageName() + ".EXIT";
 	public TextView baseTitle;//返回
 	public LinearLayout baseHome;
@@ -59,7 +59,7 @@ public abstract class BasicActivity extends Activity {
 
 	public void baseInitActionBar() {
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
-//		setSupportActionBar(toolbar);
+		setSupportActionBar(toolbar);
 	}
 	
 	protected void setActionImage(int drawable,boolean hideText) {

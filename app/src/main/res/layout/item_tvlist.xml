@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="right">
+    android:orientation="vertical">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
     <net.runningcoder.widget.ExpandableTextView
-        android:id="@+id/v_expandable_textview"
+        android:id="@+id/v_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
@@ -26,5 +21,4 @@
 （1）onMeasure()，视图大小的将在这里最终确定，也就是说measure只是对onMeasure的一个包装，子类可以覆写onMeasure()方法实现自己的计算视图大小的方式，
 并通过setMeasuredDimension(width, height)保存计算结果。"
         />
-
-</RelativeLayout>
+</LinearLayout>
