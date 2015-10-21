@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="item_progress_bar_attr">
+        <attr name="progressReachedColor" format="reference|color" />
+        <attr name="reachedColorAlpha" format="integer" />
+        <attr name="progressTextSize" format="dimension" />
+        <attr name="progressTextColor" format="reference|color" />
+        <attr name="showNum" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -60,9 +60,9 @@ public class RunningCodeApplication extends Application {
         super.onCreate();
         PathUtil.initial(this);
         CRASH_LOG = PathUtil.getInstance().getCacheRootPath("log") + "/rc_crash.log";
-        RcExceptionHandler handler = new RcExceptionHandler();
-        Thread.setDefaultUncaughtExceptionHandler(handler);
-        Thread.currentThread().setUncaughtExceptionHandler(handler);
+//        RcExceptionHandler handler = new RcExceptionHandler();
+//        Thread.setDefaultUncaughtExceptionHandler(handler);
+//        Thread.currentThread().setUncaughtExceptionHandler(handler);
     }
 
 

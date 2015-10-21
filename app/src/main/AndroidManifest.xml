@@ -30,6 +30,10 @@
             android:name=".activity.TVListActivity"
             android:label="@string/title_activity_tvlist" >
         </activity>
+        <activity
+            android:name=".activity.TagGroupViewActivity"
+            android:label="@string/title_activity_tag" >
+        </activity>
     </application>
 
 </manifest>

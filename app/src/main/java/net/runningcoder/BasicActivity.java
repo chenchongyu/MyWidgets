@@ -7,13 +7,15 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
 public abstract class BasicActivity extends ActionBarActivity {
@@ -23,12 +25,13 @@ public abstract class BasicActivity extends ActionBarActivity {
 	public TextView baseSubject;
 	public TextView baseActionBtn;//actionbar右上角按按钮
 	protected Toolbar toolbar;
-	Handler mHandler = new Handler();
-	private int mServiceType;
-	 
+
+	private SystemBarTintManager tintManager;
+
 	protected void onCreate(Bundle arg0) {
 		
 		super.onCreate(arg0);
+		super.setContentView(R.layout.layout_base);
 		setContentView(getContentViewID());
 		if(showActionbar())
 			baseInitActionBar();
@@ -38,7 +41,19 @@ public abstract class BasicActivity extends ActionBarActivity {
 	    registerReceiver(mExitReceiver, filter);
 	    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 	}
-	
+
+	@Override
+	public void setContentView(int layoutResID) {
+		setContentView(View.inflate(this, layoutResID, null));
+	}
+
+	@Override
+	public void setContentView(View view) {
+		LinearLayout root = (LinearLayout) findViewById(R.id.v_root);
+		if(root == null) return;
+		root.addView(view, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+	}
+
 	/***
 	 * 不想显示actionbar的activity需要重写此方法
 	 * 返回false即可
@@ -59,7 +74,21 @@ public abstract class BasicActivity extends ActionBarActivity {
 
 	public void baseInitActionBar() {
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
+		if (toolbar != null) {
+			setSupportActionBar(toolbar);
+			tintManager=new SystemBarTintManager(this);
+			setStatusBarColor(R.color.colorPrimaryDark);
+			tintManager.setStatusBarTintEnabled(true);
+		}
+
+	}
+
+	protected void setActionBarColor(int color){
+//		toolbar.setBackgroundColor(color);
+		toolbar.setBackgroundResource(color);
+	}
+	protected void setStatusBarColor(int color){
+		tintManager.setStatusBarTintResource(color);
 	}
 	
 	protected void setActionImage(int drawable,boolean hideText) {

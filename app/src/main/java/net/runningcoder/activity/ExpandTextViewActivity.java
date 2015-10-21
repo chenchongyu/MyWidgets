@@ -13,6 +13,7 @@ public class ExpandTextViewActivity extends BasicActivity {
 		super.onCreate(arg0);
 		String title = getIntent().getStringExtra("title");
 		setTitle(title);
+		setStatusBarColor(android.R.color.holo_blue_light);
 	}
 
 	@Override

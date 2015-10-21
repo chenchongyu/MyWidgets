@@ -123,10 +123,10 @@ public class ExpandableTextView extends RelativeLayout implements View.OnClickLi
 
         img = new ImageView(getContext());
 
-        LayoutParams imgLp = new LayoutParams(40,40);
+        LayoutParams imgLp = new LayoutParams(30,30);
         imgLp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         imgLp.addRule(RelativeLayout.BELOW,tv.getId());
-        imgLp.rightMargin = 30;
+        imgLp.rightMargin = 20;
         img.setLayoutParams(imgLp);
 
         if(mCurrentModel == MODEL_EXPAND){

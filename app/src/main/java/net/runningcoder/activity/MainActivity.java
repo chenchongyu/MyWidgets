@@ -2,6 +2,8 @@ package net.runningcoder.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +16,7 @@ import net.runningcoder.R;
 import net.runningcoder.adapter.MainAdapter;
 import net.runningcoder.bean.WidgetItem;
 import net.runningcoder.listener.OnItemClickForRecycler;
+import net.runningcoder.widget.ListViewItemProgress;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +25,18 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
     private RecyclerView recyclerView;
     private MainAdapter adapter;
+    private ListViewItemProgress progressBar;
     private List<WidgetItem> list = new ArrayList<WidgetItem>();
+    private int progree = 0;
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            progressBar.setProgress(progree);
+            progree++;
+            if(progree <=100)
+                handler.sendMessageDelayed(new Message(),100);
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +47,15 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     private void initData() {
         list.add(new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"));
         list.add(new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"));
+        list.add(new WidgetItem(3,"标签效果","标签效果"));
         adapter.notifyDataSetChanged();
+
+        handler.sendEmptyMessage(0);
     }
 
     private void initView() {
         setTitle(R.string.title_activity_main);
+        progressBar = (ListViewItemProgress) findViewById(R.id.v_progress);
         recyclerView = (RecyclerView) findViewById(R.id.v_recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -83,14 +101,15 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         switch (item.id){
             case 1:
                 intent = new Intent(this, ExpandTextViewActivity.class);
-                intent.putExtra("title", item.name);
-
                 break;
             case 2:
                 intent = new Intent(this, TVListActivity.class);
-                intent.putExtra("title", item.name);
+                break;
+            case 3:
+                intent = new Intent(this,TagGroupViewActivity.class);
                 break;
         }
+        intent.putExtra("title", item.name);
         startActivity(intent);
     }
 }
