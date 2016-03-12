@@ -10,13 +10,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import net.runningcoder.BasicActivity;
 import net.runningcoder.R;
 import net.runningcoder.adapter.MainAdapter;
 import net.runningcoder.bean.WidgetItem;
 import net.runningcoder.listener.OnItemClickForRecycler;
+import net.runningcoder.widget.AlphaButton;
 import net.runningcoder.widget.ListViewItemProgress;
+import net.runningcoder.widget.PopupMenu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +31,18 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     private ListViewItemProgress progressBar;
     private List<WidgetItem> list = new ArrayList<WidgetItem>();
     private int progree = 0;
+    private PopupMenu menu;
+    AlphaButton vBtn;
+    int i = 0;
+    boolean isAdd = true;
+
+    private final static WidgetItem[] WIDGETS = new WidgetItem[]{
+        new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"),
+        new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"),
+        new WidgetItem(3,"标签效果","标签效果"),
+        new WidgetItem(4,"圆形进度条","圆形进度条")
+    };
+
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -45,16 +60,58 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     }
 
     private void initData() {
-        list.add(new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"));
-        list.add(new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"));
-        list.add(new WidgetItem(3,"标签效果","标签效果"));
-        adapter.notifyDataSetChanged();
 
         handler.sendEmptyMessage(0);
+
+        menu = new PopupMenu(this);
+        menu.add(1,"消息").setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info));
+        menu.add(2,"设置").setIcon(getResources().getDrawable(R.drawable.image_menu_option_setting));
+        menu.add(3,"更多").setIcon(getResources().getDrawable(android.R.drawable.ic_menu_more));
+
+        menu.setOnItemSelectedListener(new PopupMenu.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(net.runningcoder.widget.MenuItem item) {
+                switch (item.getItemId()) {
+                    case 1:
+                        Toast.makeText(MainActivity.this,"消息",Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(MainActivity.this, "设置", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        Toast.makeText(MainActivity.this,"更多",Toast.LENGTH_SHORT).show();
+                        break;
+
+                }
+            }
+        });
     }
 
     private void initView() {
         setTitle(R.string.title_activity_main);
+        vBtn = $(R.id.v_btn);
+        vBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (i == WIDGETS.length){
+                    isAdd = false;
+                }
+                if (i == 0)
+                    isAdd = true;
+                if (isAdd){
+                    list.add(WIDGETS[i]);
+                    adapter.notifyItemInserted(i);
+                    i++;
+                }else {
+                    adapter.notifyItemRemoved(list.size() - 1);
+                    list.remove(list.size()-1);
+                    i-- ;
+                }
+
+
+            }
+        });
+
         progressBar = (ListViewItemProgress) findViewById(R.id.v_progress);
         recyclerView = (RecyclerView) findViewById(R.id.v_recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -87,6 +144,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            menu.show(findViewById(R.id.action_settings));
             return true;
         }
 
@@ -107,6 +165,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 3:
                 intent = new Intent(this,TagGroupViewActivity.class);
+                break;
+            case 4:
+                intent = new Intent(this,CircleProgressViewActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

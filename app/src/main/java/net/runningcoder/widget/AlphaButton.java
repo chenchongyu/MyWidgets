@@ -44,21 +44,20 @@ public class AlphaButton extends Button {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-
 		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			if (changeAlphaOnPress)
-				mBgDrawable.setAlpha((int) (originalAlpha * (0.7f)));
-			break;
-		case MotionEvent.ACTION_UP:
-		case MotionEvent.ACTION_CANCEL:
-			if (changeAlphaOnPress)
-				mBgDrawable.setAlpha(originalAlpha);
-			break;
-		default:
-			break;
-		}
+			case MotionEvent.ACTION_DOWN:
+				if (changeAlphaOnPress)
+					mBgDrawable.setAlpha((int) (originalAlpha * (0.7f)));
+				break;
+			case MotionEvent.ACTION_UP:
+			case MotionEvent.ACTION_CANCEL:
+				if (changeAlphaOnPress)
+					mBgDrawable.setAlpha(originalAlpha);
+				break;
+			default:
+				break;
+			}
 
-		return super.onTouchEvent(event);
+			return super.onTouchEvent(event);
 	}
 }

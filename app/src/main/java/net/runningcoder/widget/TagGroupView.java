@@ -66,9 +66,9 @@ public class TagGroupView extends ViewGroup {
         a.recycle();
     }
 
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        L.i("--------------onMeasure-------------");
         final int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         final int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 
@@ -109,6 +109,12 @@ public class TagGroupView extends ViewGroup {
         width = (widthMode == MeasureSpec.EXACTLY) ? widthSize : width;
         L.i("TagGroupView  onMeasure width-height:" + width + ":"+height);
         setMeasuredDimension(width, height);
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        L.i("---------onSizeChanged--------------"+w+":"+h+":"+oldw+":"+oldh);
     }
 
     @Override

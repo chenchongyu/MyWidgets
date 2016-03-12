@@ -15,6 +15,7 @@
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
         app:showAsAction="ifRoom"/>
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:icon="@android:drawable/ic_menu_more"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"/>
 </menu>

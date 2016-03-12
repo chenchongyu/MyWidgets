@@ -58,8 +58,8 @@ public class ListViewItemProgress extends ProgressBar {
 		mTextPaint = new Paint();
 		mTextPaint.setColor(textColor);
 	}
-	
-	
+
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 		canvas.save();

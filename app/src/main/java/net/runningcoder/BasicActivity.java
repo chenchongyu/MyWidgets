@@ -133,4 +133,8 @@ public abstract class BasicActivity extends ActionBarActivity {
 	  intent.setAction(ACTION_EXIT);
 	  sendBroadcast(intent);
   }
+
+	protected <T extends View>T $(int id){
+		return (T)findViewById(id);
+	}
 }

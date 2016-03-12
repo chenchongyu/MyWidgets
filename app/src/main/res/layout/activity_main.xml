@@ -6,11 +6,12 @@
     android:orientation="vertical"
     >
     <net.runningcoder.widget.AlphaButton
+        android:id="@+id/v_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:background="@android:color/holo_blue_light"
-        android:text="I'm an AlphaButton!"
+        android:text="Click me to add item."
         android:textSize="15sp"/>
 
     <net.runningcoder.widget.ListViewItemProgress
