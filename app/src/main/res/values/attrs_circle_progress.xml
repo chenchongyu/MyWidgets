@@ -1,0 +1,14 @@
+<resources>
+    <declare-styleable name="CircleProgress">
+        <attr name="is_loading" format="boolean" />
+        <attr name="loadingTextSize" format="dimension" />
+        <attr name="loadingTextColor" format="color|reference" />
+        <attr name="radius" format="integer"/>
+        <attr name="circleColor" format="color|reference"/>
+        <attr name="arcColor" format="color|reference"/>
+        <attr name="arc_width" format="integer"/>
+        <attr name="arc_long" format="integer"/>
+        <attr name="speed" format="integer"/>
+        <attr name="loading_text" format="string|reference"/>
+    </declare-styleable>
+</resources>

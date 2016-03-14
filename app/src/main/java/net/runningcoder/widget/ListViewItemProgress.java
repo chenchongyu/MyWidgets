@@ -57,6 +57,7 @@ public class ListViewItemProgress extends ProgressBar {
 		
 		mTextPaint = new Paint();
 		mTextPaint.setColor(textColor);
+		a.recycle();
 	}
 
 

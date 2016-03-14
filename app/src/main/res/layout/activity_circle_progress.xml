@@ -3,20 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:orientation="vertical"
     >
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="---------自定义圆形进度条----------"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"/>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-------------------test---------------"/>
+        android:text="可以自定义外圆颜色、圆弧颜色、文字颜色；可以自定义圆弧长度、宽度、速度；可以自动以文字内容和大小；可以设置成loading状态，也可以手动设置进度；"
+        android:textSize="12sp"/>
 
     <net.runningcoder.widget.CircleProgress
         android:id="@+id/v_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:gravity="right"
+        app:arc_long="10"
+        app:arcColor="@color/colorPrimary"
+        app:radius="200"
+        app:loadingTextSize="20sp"
+        app:loadingTextColor="@android:color/holo_red_light"
+        app:speed="5"
+        app:loading_text="努力加载中..."
         />
 
 </LinearLayout>
