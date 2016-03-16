@@ -22,6 +22,7 @@ import net.runningcoder.widget.ListViewItemProgress;
 import net.runningcoder.widget.PopupMenu;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends BasicActivity implements OnItemClickForRecycler{
@@ -40,7 +41,8 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"),
         new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"),
         new WidgetItem(3,"标签效果","标签效果"),
-        new WidgetItem(4,"圆形进度条","圆形进度条")
+        new WidgetItem(4,"圆形进度条","圆形进度条"),
+        new WidgetItem(5,"圆形图片","圆形图片")
     };
 
     Handler handler = new Handler() {
@@ -63,6 +65,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
         handler.sendEmptyMessage(0);
 
+        list.addAll(Arrays.asList(WIDGETS));
         menu = new PopupMenu(this);
         menu.add(1,"消息").setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info));
         menu.add(2,"设置").setIcon(getResources().getDrawable(R.drawable.image_menu_option_setting));
@@ -90,7 +93,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     private void initView() {
         setTitle(R.string.title_activity_main);
         vBtn = $(R.id.v_btn);
-        vBtn.setOnClickListener(new View.OnClickListener() {
+        /*vBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (i == WIDGETS.length){
@@ -110,7 +113,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
 
             }
-        });
+        });*/
 
         progressBar = (ListViewItemProgress) findViewById(R.id.v_progress);
         recyclerView = (RecyclerView) findViewById(R.id.v_recycler_view);
@@ -168,6 +171,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 4:
                 intent = new Intent(this,CircleProgressViewActivity.class);
+                break;
+            case 5:
+                intent = new Intent(this,CircleImageViewActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

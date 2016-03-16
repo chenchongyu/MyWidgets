@@ -37,6 +37,9 @@
         <activity
             android:name=".activity.CircleProgressViewActivity"
             android:label="@string/title_activity_tag" />
+        <activity
+            android:name=".activity.CircleImageViewActivity"
+            android:label="@string/title_activity_tag" />
     </application>
 
 </manifest>
