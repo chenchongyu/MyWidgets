@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.LayoutAnimationController;
 import android.widget.TextView;
 
 import net.runningcoder.R;
@@ -32,6 +34,8 @@ public class TagGroupView extends ViewGroup {
     private int horizontalSpacing = 5;//每个标签的横向间距
     private int verticalSpacing = 5;//每个标签的纵向间距
 
+    //设置添加tag时候的动画效果
+    private AlphaAnimation mAlphaAnimation;
 
 
     public TagGroupView(Context context) {
@@ -63,7 +67,18 @@ public class TagGroupView extends ViewGroup {
         horizontalSpacing = (int) a.getDimension(R.styleable.TagGroupView_tagHorizontalSpacing, horizontalSpacing);
         verticalSpacing = (int) a.getDimension(R.styleable.TagGroupView_tagVerticalSpacing, verticalSpacing);
 
+        setUpAnim();
+
         a.recycle();
+    }
+
+    private void setUpAnim() {
+        mAlphaAnimation = new AlphaAnimation(0,1);
+        mAlphaAnimation.setDuration(500);
+
+        LayoutAnimationController layoutAnimationController = new LayoutAnimationController(mAlphaAnimation);
+        layoutAnimationController.setOrder(LayoutAnimationController.ORDER_NORMAL);
+        setLayoutAnimation(layoutAnimationController);
     }
 
     @Override

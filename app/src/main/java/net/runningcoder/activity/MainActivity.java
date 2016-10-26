@@ -42,7 +42,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"),
         new WidgetItem(3,"标签效果","标签效果"),
         new WidgetItem(4,"圆形进度条","圆形进度条"),
-        new WidgetItem(5,"圆形图片","圆形图片")
+        new WidgetItem(5,"圆形图片","圆形图片"),
+        new WidgetItem(6,"音频条形图","音频条形图"),
+        new WidgetItem(7,"刮刮卡","刮刮卡")
     };
 
     Handler handler = new Handler() {
@@ -65,7 +67,6 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
         handler.sendEmptyMessage(0);
 
-        list.addAll(Arrays.asList(WIDGETS));
         menu = new PopupMenu(this);
         menu.add(1,"消息").setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info));
         menu.add(2,"设置").setIcon(getResources().getDrawable(R.drawable.image_menu_option_setting));
@@ -93,7 +94,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     private void initView() {
         setTitle(R.string.title_activity_main);
         vBtn = $(R.id.v_btn);
-        /*vBtn.setOnClickListener(new View.OnClickListener() {
+        vBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (i == WIDGETS.length){
@@ -113,13 +114,15 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
 
             }
-        });*/
+        });
 
         progressBar = (ListViewItemProgress) findViewById(R.id.v_progress);
         recyclerView = (RecyclerView) findViewById(R.id.v_recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        list.addAll(Arrays.asList(WIDGETS));
 
         adapter = new MainAdapter(list,this);
         recyclerView.setAdapter(adapter);
@@ -174,6 +177,12 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 5:
                 intent = new Intent(this,CircleImageViewActivity.class);
+                break;
+            case 6:
+                intent = new Intent(this,AudioBarActivity.class);
+                break;
+            case 7:
+                intent = new Intent(this,ScratchCardActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

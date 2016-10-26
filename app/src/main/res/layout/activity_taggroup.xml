@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="可以自定义背景颜色、文字颜色；可以自定义每个标签的横向间距、纵向间距；"
+        android:text="可以自定义背景颜色、文字颜色；可以自定义每个标签的横向间距、纵向间距；(标签动画效果需要开启animateLayoutChanges)"
         android:textSize="12sp"/>
 
     <net.runningcoder.widget.TagGroupView
@@ -25,6 +25,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:gravity="right"
+        android:animateLayoutChanges="true"
         app:tagTextColor="@android:color/white"
         app:tagTextSize="18sp"
         app:tagBackground="@android:color/holo_blue_light"

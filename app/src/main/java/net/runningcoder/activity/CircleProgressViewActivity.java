@@ -29,7 +29,7 @@ public class CircleProgressViewActivity extends BasicActivity{
 		circleProgress.setIsLoading(true);
 
 		MyHandler handler = new MyHandler(this);
-		handler.sendEmptyMessageDelayed(1,3000);
+		handler.sendEmptyMessageDelayed(1,2000);
 	}
 
 	@Override

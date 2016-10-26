@@ -9,16 +9,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="---------自定义圆形进度条----------"
+        android:text="---------自定义音频条----------"
         android:gravity="center_horizontal"
         android:textSize="15sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="可以自定义外圆颜色、圆弧颜色、文字颜色；可以自定义圆弧长度、宽度、速度；可以自动以文字内容和大小；可以设置成loading状态，也可以手动设置进度；"
+        android:text="可以自定义矩形个数，矩形间宽度，矩形宽度，渐变颜色等，手动开启停止；"
+        android:paddingBottom="20dp"
         android:textSize="12sp"/>
 
-    <net.runningcoder.widget.CircleProgress
+    <net.runningcoder.widget.AudioBar
         android:id="@+id/v_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,13 +27,25 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:gravity="right"
-        app:arc_long="90"
-        app:arcColor="@color/colorPrimary"
-        app:radius="200"
-        app:loadingTextSize="20sp"
-        app:loadingTextColor="@android:color/holo_red_light"
-        app:speed="5"
-        app:loading_text="努力加载中..."
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始"
+            />
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止"
+            />
+
+    </LinearLayout>
 </LinearLayout>

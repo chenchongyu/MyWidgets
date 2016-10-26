@@ -34,7 +34,7 @@ public class CircleProgress extends View {
     //datas
     private int circleRadius=100;//内圆半径
     private int arcWidth = 15;//圆弧宽度
-    private int arcLong = 30;//圆弧长度
+    private int arcLong = 60;//圆弧长度
     private String loadintText = "loading...";
     private int textSize = 30;
     private int destProgress;
@@ -64,7 +64,7 @@ public class CircleProgress extends View {
         textSize = (int)a.getDimension(R.styleable.CircleProgress_loadingTextSize,20);
         arcWidth = (int)a.getDimension(R.styleable.CircleProgress_arc_width,15);
         circleRadius = a.getInt(R.styleable.CircleProgress_radius,100);
-        arcLong = a.getInt(R.styleable.CircleProgress_arc_long, 30);
+        arcLong = a.getInt(R.styleable.CircleProgress_arc_long, 60);
         speed = a.getInt(R.styleable.CircleProgress_speed, 2);
 
         if (a.hasValue(R.styleable.CircleProgress_loading_text))
@@ -149,7 +149,7 @@ public class CircleProgress extends View {
     }
 
 
-    private long delay = 80;
+    private long delay = 100;
     private Handler validateHandler = new Handler() {
 
         @Override

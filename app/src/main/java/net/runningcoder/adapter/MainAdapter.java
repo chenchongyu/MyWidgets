@@ -9,6 +9,7 @@ import android.widget.TextView;
 import net.runningcoder.R;
 import net.runningcoder.bean.WidgetItem;
 import net.runningcoder.listener.OnItemClickForRecycler;
+import net.runningcoder.util.L;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     private List<WidgetItem> list;
     public OnItemClickForRecycler listener;
     public MainAdapter(List<WidgetItem> list,OnItemClickForRecycler listener){
+        L.i("list size:"+list.size());
         this.list = list;
         this.listener = listener;
     }
