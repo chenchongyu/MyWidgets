@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="TagGroupView">
+        <attr name="readonly" format="boolean" />
+        <attr name="tagTextSize" format="dimension" />
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagHorizontalSpacing" format="integer"/>
+        <attr name="tagVerticalSpacing" format="integer"/>
+        <attr name="tagBackground" format="color|reference"/>
+    </declare-styleable>
+</resources>
