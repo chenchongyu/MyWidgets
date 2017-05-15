@@ -44,7 +44,8 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         new WidgetItem(4,"圆形进度条","圆形进度条"),
         new WidgetItem(5,"圆形图片","圆形图片"),
         new WidgetItem(6,"音频条形图","音频条形图"),
-        new WidgetItem(7,"刮刮卡","刮刮卡")
+        new WidgetItem(7,"刮刮卡","刮刮卡"),
+        new WidgetItem(8,"Tips","Tips")
     };
 
     Handler handler = new Handler() {
@@ -183,6 +184,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 7:
                 intent = new Intent(this,ScratchCardActivity.class);
+                break;
+            case 8:
+                intent = new Intent(this,TipsViewActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

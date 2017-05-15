@@ -46,6 +46,9 @@
         <activity
             android:name=".activity.ScratchCardActivity"
             android:label="@string/title_activity_tag" />
+        <activity
+            android:name=".activity.TipsViewActivity"
+            android:label="@string/title_activity_tag" />
     </application>
 
 </manifest>
