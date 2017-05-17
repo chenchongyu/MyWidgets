@@ -4,16 +4,15 @@ import android.content.Context;
 import android.graphics.Point;
 import android.text.TextUtils;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import net.runningcoder.R;
 import net.runningcoder.util.ViewUtils;
 
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static net.runningcoder.widget.tips.TriangleView.Direction.DOWN;
 import static net.runningcoder.widget.tips.TriangleView.Direction.LEFT;
 import static net.runningcoder.widget.tips.TriangleView.Direction.RIGHT;
@@ -25,7 +24,6 @@ import static net.runningcoder.widget.tips.TriangleView.Direction.UP;
  * Date: 2017/5/11
  * Description:
  */
-
 public class TipsView {
     private final static int TRIANGLE_HEIGHT = 10;
     private final static int TRIANGLE_WIDTH = 5;
@@ -107,16 +105,31 @@ public class TipsView {
 
 //        mPopupWindow.setOutsideTouchable(true);
         mPopupWindow.setBackgroundDrawable(null);
-        setContentView(R.layout.layout_tips_view);
+        setContentView();
 
     }
 
-    private void setContentView(int layout) {
-        contentView = (LinearLayout) LayoutInflater.from(context).inflate(layout,null);
-        contentBox = (LinearLayout) contentView.findViewById(R.id.tips_box);
+    private void setContentView() {
+        contentView = new LinearLayout(context);
+        contentView.setLayoutParams(new LinearLayout.LayoutParams(MATCH_PARENT,WRAP_CONTENT));
+        contentView.setOrientation(LinearLayout.VERTICAL);
 
-        vTitle = (TextView) contentView.findViewById(R.id.tips_title);
-        vContent = (TextView) contentView.findViewById(R.id.tips_content);
+        contentBox = new LinearLayout(context);
+        contentBox.setOrientation(LinearLayout.VERTICAL);
+
+
+        vTitle = new TextView(context);
+        vTitle.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT,WRAP_CONTENT));
+//        vTitle.setVisibility(GONE);
+
+        vContent = new TextView(context);
+        vContent.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT,WRAP_CONTENT));
+//        vContent.setVisibility(GONE);
+
+        contentBox.addView(vTitle);
+        contentBox.addView(vContent);
+
+        contentView.addView(contentBox);
 
         mPopupWindow.setContentView(contentView);
 
@@ -176,7 +189,7 @@ public class TipsView {
                 setHorizontalLeftLayout(anchor);
                 break;
             case RIGHT:
-                setHorizontalRightLayout();
+                setHorizontalRightLayout(anchor);
                 break;
         }
     }
@@ -191,10 +204,10 @@ public class TipsView {
             }
             return locations[0]+ anchorWidth;
         }else if (mDirection == RIGHT){
-            return (int) (anchor.getX() - contentViewWidth-dp2px(TRIANGLE_HEIGHT));
+            return (int) (anchor.getX() - contentViewWidth-dp2px(TRIANGLE_WIDTH));
         }else{
             //上下方向 锚点x-10% （rate=0.8为例）
-            return (int) (anchor.getX()+anchorWidth*(1-widthRate)/2);
+            return (int) (locations[0]+anchorWidth*(1-widthRate)/2);
         }
     }
 
@@ -221,12 +234,12 @@ public class TipsView {
         if (height != 0)
             mPopupWindow.setHeight(height);
         else
-            mPopupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+            mPopupWindow.setHeight(WRAP_CONTENT);
 
         if (width != 0)
             mPopupWindow.setWidth(width);
         else{
-            mPopupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
+            mPopupWindow.setWidth(WRAP_CONTENT);
 
             if (mDirection == UP || mDirection == DOWN)
                 mPopupWindow.setWidth((int) (anchor.getWidth()*widthRate));
@@ -253,9 +266,9 @@ public class TipsView {
      */
     private void setVerticalUpLayout(View view) {
         mDirection = UP;
-
+        contentView.setOrientation(LinearLayout.VERTICAL);
         LinearLayout.LayoutParams posParams = new LinearLayout.LayoutParams(dp2px(TRIANGLE_HEIGHT),dp2px(TRIANGLE_WIDTH));
-        if (mStrategy != TriangleView.PosStrategy.AUTO_CENTER)
+        if (mStrategy == TriangleView.PosStrategy.ANCHOR_CENTER)
             posParams.setMargins(view.getLeft()+view.getWidth()/2,0,0,0);
         else
             contentView.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -270,12 +283,15 @@ public class TipsView {
      */
     private void setVerticalDownLayout(View view) {
         mDirection = DOWN;
-
+        contentView.setOrientation(LinearLayout.VERTICAL);
         LinearLayout.LayoutParams posParams = new LinearLayout.LayoutParams(dp2px(TRIANGLE_HEIGHT),dp2px(TRIANGLE_WIDTH));
         mTriangleView.setLayoutParams(posParams);
+        if (mStrategy == TriangleView.PosStrategy.ANCHOR_CENTER)
+            posParams.setMargins(view.getLeft()+view.getWidth()/2,0,0,0);
+        else
+            contentView.setGravity(Gravity.CENTER_HORIZONTAL);
 //        posParams.setMargins(view.getLeft()+view.getWidth()/2,0,0,0);
         contentView.addView(mTriangleView,1);
-        contentView.setGravity(Gravity.CENTER_HORIZONTAL);
 
     }
 
@@ -289,30 +305,37 @@ public class TipsView {
         LinearLayout.LayoutParams posParams = new LinearLayout.LayoutParams(dp2px(TRIANGLE_WIDTH),dp2px(TRIANGLE_HEIGHT));
         //箭头Y坐标 = view的y+（view的高度-箭头高度）/2
         //marginTop = 箭头Y-popwindow y
-//        int top = locations[1]+(view.getMeasuredHeight()-dp2px(TRIANGLE_HEIGHT)) / 2;
-//        posParams.setMargins(0, top-popWindowY,0,0);
+
+        if (mStrategy == TriangleView.PosStrategy.ANCHOR_CENTER){
+            int top = locations[1]+(view.getMeasuredHeight()-dp2px(TRIANGLE_HEIGHT)) / 2;
+            posParams.setMargins(0, top-popWindowY,0,0);
+        }else
+            contentView.setGravity(Gravity.CENTER_VERTICAL);
+
         mTriangleView.setLayoutParams(posParams);
 
         contentView.addView(mTriangleView,0);
-        contentView.setGravity(Gravity.CENTER_VERTICAL);
     }
 
     /**
      * 箭头向右布局
      */
-    private void setHorizontalRightLayout() {
+    private void setHorizontalRightLayout(View view) {
         mDirection = RIGHT;
 
         contentView.setOrientation(LinearLayout.HORIZONTAL);
         LinearLayout.LayoutParams posParams = new LinearLayout.LayoutParams(dp2px(TRIANGLE_WIDTH),dp2px(TRIANGLE_HEIGHT));
         //箭头Y坐标 = view的y+（view的高度-箭头高度）/2
         //marginTop = 箭头Y-popwindow y
-//        int top = locations[1]+(view.getMeasuredHeight()-dp2px(TRIANGLE_HEIGHT)) / 2;
-//        posParams.setMargins(0, top-popWindowY,0,0);
+
+        if (mStrategy == TriangleView.PosStrategy.ANCHOR_CENTER){
+            int top = locations[1]+(view.getMeasuredHeight()-dp2px(TRIANGLE_HEIGHT)) / 2;
+            posParams.setMargins(0, top-popWindowY,0,0);
+        }else
+            contentView.setGravity(Gravity.CENTER_VERTICAL);
         mTriangleView.setLayoutParams(posParams);
 
         contentView.addView(mTriangleView,1);
-        contentView.setGravity(Gravity.CENTER_VERTICAL);
     }
 
     public static class Builder{

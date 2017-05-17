@@ -59,17 +59,6 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 		}
 	}
 
-	private void showDownTips(View v) {
-		new TipsView.Builder()
-				.with(this)
-				.color(R.color.default_reached_color)
-				.title("箭头向下 build")
-				.content(((TextView)v).getText().toString())
-				.direction(TriangleView.Direction.DOWN)
-				.build()
-				.show(v);
-	}
-
 	private void showUpTips(View v) {
 		new TipsView.Builder()
 				.with(this)
@@ -89,6 +78,23 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 				.show(v);
 	}
 
+	private void showDownTips(View v) {
+		new TipsView.Builder()
+				.with(this)
+				.color(R.color.default_reached_color)
+				.title("箭头向下 build")
+				.content(((TextView)v).getText().toString())
+				.direction(TriangleView.Direction.DOWN)
+				.setOnClickListener(new TipsView.OnTipClickListener() {
+					@Override
+					public void onClick(TipsView view) {
+						view.dismiss();
+					}
+				})
+				.build()
+				.show(v);
+	}
+
 	private void showLeftTips(View v) {
 		new TipsView.Builder()
 				.with(this)
@@ -97,6 +103,12 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 				.width(500)
 				.content(((TextView)v).getText().toString())
 				.direction(TriangleView.Direction.LEFT)
+				.setOnClickListener(new TipsView.OnTipClickListener() {
+					@Override
+					public void onClick(TipsView view) {
+						view.dismiss();
+					}
+				})
 				.build()
 				.show(v);
 	}
@@ -108,6 +120,12 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 				.title("箭头向右 build")
 				.content(((TextView)v).getText().toString())
 				.direction(TriangleView.Direction.RIGHT)
+				.setOnClickListener(new TipsView.OnTipClickListener() {
+					@Override
+					public void onClick(TipsView view) {
+						view.dismiss();
+					}
+				})
 				.build()
 				.show(v);
 	}

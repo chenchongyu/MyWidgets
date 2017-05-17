@@ -31,8 +31,8 @@
             android:id="@+id/v_btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="默认布局（wrap_content)；\n自动居中；"
+            android:layout_marginTop="30dp"
+            android:text="默认布局（wrap_content)========；\n自动居中；"
             android:background="@android:color/holo_blue_bright"
             android:textSize="12sp"/>
     </LinearLayout>
@@ -42,7 +42,7 @@
         android:id="@+id/v_btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="115dp"
         android:text="内容较少"
         android:background="@android:color/holo_red_light"
         android:textSize="12sp"/>
@@ -51,10 +51,10 @@
         android:id="@+id/v_btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="85dp"
         android:layout_marginLeft="200dp"
         android:text="很多内容；\n很多内容；\n很多内容；\n很多内容；\n很多内容；\n很多内容；\n很多内容；"
-        android:background="@android:color/holo_red_light"
+        android:background="@android:color/holo_green_light"
         android:textSize="12sp"/>
 
 </LinearLayout>
