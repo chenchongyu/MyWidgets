@@ -81,6 +81,8 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 	private void showDownTips(View v) {
 		new TipsView.Builder()
 				.with(this)
+//				.position(TriangleView.PosStrategy.ANCHOR_CENTER)
+//				.width(WindowManager.LayoutParams.MATCH_PARENT)
 				.color(R.color.default_reached_color)
 				.title("箭头向下 build")
 				.content(((TextView)v).getText().toString())

@@ -1,5 +1,6 @@
 package net.runningcoder.widget.tips;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Point;
 import android.text.TextUtils;
@@ -7,8 +8,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
 
+import net.runningcoder.util.L;
 import net.runningcoder.util.ViewUtils;
 
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
@@ -37,8 +38,8 @@ public class TipsView {
     private int popWindowY;//popwindow y坐标
     private int popWindowX;
     private int[] locations;
-    private TextView vContent;
-    private TextView vTitle;
+    private TipsTextView vContent;
+    private TipsTextView vTitle;
 
     //可配置参数
     /**popwindow宽度和锚点宽度比例，默认为0.8*/
@@ -118,11 +119,11 @@ public class TipsView {
         contentBox.setOrientation(LinearLayout.VERTICAL);
 
 
-        vTitle = new TextView(context);
+        vTitle = new TipsTextView(context);
         vTitle.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT,WRAP_CONTENT));
 //        vTitle.setVisibility(GONE);
 
-        vContent = new TextView(context);
+        vContent = new TipsTextView(context);
         vContent.setLayoutParams(new LinearLayout.LayoutParams(WRAP_CONTENT,WRAP_CONTENT));
 //        vContent.setVisibility(GONE);
 
@@ -137,12 +138,13 @@ public class TipsView {
 
     public void setContent(String content) {
         vContent.setText(content);
-        vContent.setVisibility(View.VISIBLE);
+        vContent.measure(0,0);
+        vContent.requestLayout();
+
     }
 
     public void setTitle(String title) {
         vTitle.setText(title);
-        vTitle.setVisibility(View.VISIBLE);
     }
 
     public void setColor(int color){
@@ -164,10 +166,12 @@ public class TipsView {
     }
 
     public void show(View anchor){
+
         measurePopWindow(anchor);
         assemble(anchor);
 
-        mPopupWindow.showAtLocation(anchor, Gravity.NO_GRAVITY,popWindowX,popWindowY);
+        mPopupWindow.setAnimationStyle(android.R.style.Animation_Toast);
+        mPopupWindow.showAtLocation(((Activity)context).getWindow().getDecorView(), Gravity.NO_GRAVITY,popWindowX,popWindowY);
 
     }
 
@@ -204,23 +208,33 @@ public class TipsView {
             }
             return locations[0]+ anchorWidth;
         }else if (mDirection == RIGHT){
-            return (int) (anchor.getX() - contentViewWidth-dp2px(TRIANGLE_WIDTH));
+
+            return locations[0] - contentViewWidth-dp2px(TRIANGLE_WIDTH);
         }else{
             //上下方向 锚点x-10% （rate=0.8为例）
-            return (int) (locations[0]+anchorWidth*(1-widthRate)/2);
+            return (int) (anchorWidth*(1-widthRate)/2);
         }
     }
 
-    private int getYOffset(View anchor){
+    boolean measure = false;
+    private int getYOffset(final View anchor){
 
         if (mDirection == DOWN){
             //当内容为多行的时候，contentView.measure测量的高度不准确，需要减去一个行高；
-            int lineHeight = 0 ;
-            if (vTitle.getVisibility() == View.VISIBLE){
-                lineHeight = vTitle.getLineHeight();
-            }else
-                lineHeight = vContent.getLineHeight();
-            return locations[1]-contentViewHeight-dp2px(TRIANGLE_WIDTH)-lineHeight;
+            L.i("  locations[1]:"+locations[1]+"  contentHeight:"+contentView.getMeasuredHeight()+":"+vContent.getLineCount());
+
+            if (!measure){
+                vContent.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        popWindowY = -anchor.getMeasuredHeight()-vTitle.getActualHeight()-vContent.getActualHeight()-dp2px(TRIANGLE_HEIGHT);
+                        L.i("post popy:"+popWindowY);
+                        mPopupWindow.dismiss();
+                        mPopupWindow.showAsDropDown(anchor,popWindowX,popWindowY);
+                    }
+                });
+            }
+            return -anchor.getMeasuredHeight()-contentViewHeight-dp2px(TRIANGLE_HEIGHT);
         }else if (mDirection == UP){
             return locations[1]+anchor.getMeasuredHeight();
         }else{
@@ -228,6 +242,20 @@ public class TipsView {
         }
 
     }
+
+    /*private int getYOffset(View anchor){
+
+        if (mDirection == DOWN){
+            //当内容为多行的时候，contentView.measure测量的高度不准确，需要减去一个行高；
+            L.i("  locations[1]:"+locations[1]+"  contentHeight:"+contentView.getMeasuredHeight());
+            return locations[1]-contentViewHeight-dp2px(TRIANGLE_HEIGHT);
+        }else if (mDirection == UP){
+            return locations[1]+anchor.getMeasuredHeight();
+        }else{
+            return locations[1]-(contentViewHeight/2- anchor.getMeasuredHeight()/2);
+        }
+
+    }*/
 
     //测量、设置popwindow和内容区的宽高，测量popwindow的xy坐标
     private void measurePopWindow(View anchor) {
@@ -250,10 +278,14 @@ public class TipsView {
         anchor.getLocationInWindow(locations);
 
         int spec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        int spec2 = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.AT_MOST);
 
         contentView.measure(spec,spec);
         //计算popwindow的高度
         contentViewHeight = contentView.getMeasuredHeight();
+
+        int hh = vTitle.getActualHeight()+vContent.getActualHeight();
+        L.i(contentViewHeight+":"+ hh+":"+vContent.getMeasuredHeight());
         contentViewWidth = contentView.getMeasuredWidth();
 
         popWindowY = getYOffset(anchor);
@@ -337,6 +369,7 @@ public class TipsView {
 
         contentView.addView(mTriangleView,1);
     }
+
 
     public static class Builder{
         private double widthRate;

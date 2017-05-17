@@ -35,7 +35,7 @@ import net.runningcoder.R;
 
 
 /**
- * Copy from TriangleView create by Itai Hanski. Modified by SpringXu.
+ * Copy from TriangleView create by Itai Hanski.
  * @version 1.0
  * @author SpringXu
  */
