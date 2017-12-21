@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends BasicActivity implements OnItemClickForRecycler{
+public class MainActivity extends BasicActivity implements OnItemClickForRecycler {
 
     private RecyclerView recyclerView;
     private MainAdapter adapter;
@@ -38,14 +38,18 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     boolean isAdd = true;
 
     private final static WidgetItem[] WIDGETS = new WidgetItem[]{
-        new WidgetItem(1,"ExpanableTextView","可展开收起的TextView"),
-        new WidgetItem(2,"ExpanableTextView In ListView","可展开收起的TextView"),
-        new WidgetItem(3,"标签效果","标签效果"),
-        new WidgetItem(4,"圆形进度条","圆形进度条"),
-        new WidgetItem(5,"圆形图片","圆形图片"),
-        new WidgetItem(6,"音频条形图","音频条形图"),
-        new WidgetItem(7,"刮刮卡","刮刮卡"),
-        new WidgetItem(8,"Tips","Tips")
+            new WidgetItem(1, "ExpanableTextView", "可展开收起的TextView"),
+            new WidgetItem(2, "ExpanableTextView In ListView", "可展开收起的TextView"),
+            new WidgetItem(3, "标签效果", "标签效果"),
+            new WidgetItem(4, "圆形进度条", "圆形进度条"),
+            new WidgetItem(5, "圆形图片", "圆形图片"),
+            new WidgetItem(6, "音频条形图", "音频条形图"),
+            new WidgetItem(7, "刮刮卡", "刮刮卡"),
+            new WidgetItem(8, "Tips", "Tips"),
+            new WidgetItem(9, "popupWindow", "popupWindow"),
+            new WidgetItem(10, "checkbox", "checkbox"),
+            new WidgetItem(11, "viewpager", "viewpager"),
+            new WidgetItem(12, "无障碍检测", "check111box")
     };
 
     Handler handler = new Handler() {
@@ -53,10 +57,12 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         public void handleMessage(Message msg) {
             progressBar.setProgress(progree);
             progree++;
-            if(progree <=100)
-                handler.sendMessageDelayed(new Message(),100);
+            if (progree <= 100) {
+                handler.sendMessageDelayed(new Message(), 100);
+            }
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,22 +75,22 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         handler.sendEmptyMessage(0);
 
         menu = new PopupMenu(this);
-        menu.add(1,"消息").setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info));
-        menu.add(2,"设置").setIcon(getResources().getDrawable(R.drawable.image_menu_option_setting));
-        menu.add(3,"更多").setIcon(getResources().getDrawable(android.R.drawable.ic_menu_more));
+        menu.add(1, "消息").setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info));
+        menu.add(2, "设置").setIcon(getResources().getDrawable(R.drawable.image_menu_option_setting));
+        menu.add(3, "更多").setIcon(getResources().getDrawable(android.R.drawable.ic_menu_more));
 
         menu.setOnItemSelectedListener(new PopupMenu.OnItemSelectedListener() {
             @Override
             public void onItemSelected(net.runningcoder.widget.MenuItem item) {
                 switch (item.getItemId()) {
                     case 1:
-                        Toast.makeText(MainActivity.this,"消息",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "消息", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         Toast.makeText(MainActivity.this, "设置", Toast.LENGTH_SHORT).show();
                         break;
                     case 3:
-                        Toast.makeText(MainActivity.this,"更多",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "更多", Toast.LENGTH_SHORT).show();
                         break;
 
                 }
@@ -98,19 +104,20 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         vBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == WIDGETS.length){
+                if (i == WIDGETS.length) {
                     isAdd = false;
                 }
-                if (i == 0)
+                if (i == 0) {
                     isAdd = true;
-                if (isAdd){
+                }
+                if (isAdd) {
                     list.add(WIDGETS[i]);
                     adapter.notifyItemInserted(i);
                     i++;
-                }else {
+                } else {
                     adapter.notifyItemRemoved(list.size() - 1);
-                    list.remove(list.size()-1);
-                    i-- ;
+                    list.remove(list.size() - 1);
+                    i--;
                 }
 
 
@@ -125,7 +132,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
 
         list.addAll(Arrays.asList(WIDGETS));
 
-        adapter = new MainAdapter(list,this);
+        adapter = new MainAdapter(list, this);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
@@ -163,7 +170,7 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
     public void onItemClick(View v, int position) {
         WidgetItem item = list.get(position);
         Intent intent = null;
-        switch (item.id){
+        switch (item.id) {
             case 1:
                 intent = new Intent(this, ExpandTextViewActivity.class);
                 break;
@@ -171,22 +178,34 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 intent = new Intent(this, TVListActivity.class);
                 break;
             case 3:
-                intent = new Intent(this,TagGroupViewActivity.class);
+                intent = new Intent(this, TagGroupViewActivity.class);
                 break;
             case 4:
-                intent = new Intent(this,CircleProgressViewActivity.class);
+                intent = new Intent(this, CircleProgressViewActivity.class);
                 break;
             case 5:
-                intent = new Intent(this,CircleImageViewActivity.class);
+                intent = new Intent(this, CircleImageViewActivity.class);
                 break;
             case 6:
-                intent = new Intent(this,AudioBarActivity.class);
+                intent = new Intent(this, AudioBarActivity.class);
                 break;
             case 7:
-                intent = new Intent(this,ScratchCardActivity.class);
+                intent = new Intent(this, ScratchCardActivity.class);
                 break;
             case 8:
-                intent = new Intent(this,TipsViewActivity.class);
+                intent = new Intent(this, TipsViewActivity.class);
+                break;
+            case 9:
+                intent = new Intent(this, PopWindowActivity.class);
+                break;
+            case 10:
+                intent = new Intent(this, CheckboxActivity.class);
+                break;
+            case 11:
+                intent = new Intent(this, ViewPagerActivity.class);
+                break;
+            case 12:
+                intent = new Intent(this, AccessibilityEventActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

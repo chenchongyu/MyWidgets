@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagGroupView">
+        <attr format="boolean" name="readonly"/>
+        <attr format="dimension" name="tagTextSize"/>
+        <attr format="color" name="tagTextColor"/>
+        <attr format="integer" name="tagHorizontalSpacing"/>
+        <attr format="integer" name="tagVerticalSpacing"/>
+        <attr format="color|reference" name="tagBackground"/>
+    </declare-styleable>
+</resources>

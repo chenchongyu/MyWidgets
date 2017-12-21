@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/menu/menu_tv_list.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/menu/menu_tv_list.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/menu/menu_main.xml"
+    }
+]

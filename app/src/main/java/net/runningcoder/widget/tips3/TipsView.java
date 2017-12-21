@@ -24,7 +24,6 @@ import static net.runningcoder.widget.tips3.TriangleView.Direction.UP;
 
 /**
  * Author： chenchongyu
- * Email: chenchongyu@didichuxing.com
  * Date: 2017/5/11
  * Description:
  */

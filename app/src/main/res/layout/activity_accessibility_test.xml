@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/girl"
+        android:contentDescription="美女"
+        />
+
+    <net.runningcoder.widget.AccessibilityEventView
+        android:id="@+id/v_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/v_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="修改文字"
+        android:focusableInTouchMode="false"
+        android:onClick="onClick"
+        android:text="修改文字"
+        />
+</LinearLayout>

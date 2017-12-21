@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/icon_expand.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/icon_expand.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/radio_btn_draw_left_bg.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/radio_btn_draw_left_bg.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/icon_collapse.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/icon_collapse.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/round_rect_transparent_bg.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/round_rect_transparent_bg.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/image_menu_option_setting.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/image_menu_option_setting.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/girl.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/girl.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/onedp.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/onedp.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/round_rect_empty_bg.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/round_rect_empty_bg.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/lrt.png",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/lrt.png"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/drawable/round_rect_blue_fill_bg.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/drawable/round_rect_blue_fill_bg.xml"
+    }
+]

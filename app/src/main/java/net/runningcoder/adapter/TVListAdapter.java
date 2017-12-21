@@ -14,14 +14,16 @@ import java.util.List;
 /**
  * Created by Administrator on 2015/9/16.
  */
-public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder>{
+public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder> {
 
     private List<String> list;
     public OnItemClickForRecycler listener;
-    public TVListAdapter(List<String> list, OnItemClickForRecycler listener){
+
+    public TVListAdapter(List<String> list, OnItemClickForRecycler listener) {
         this.list = list;
         this.listener = listener;
     }
+
     @Override
     public TVListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_tvlist, parent, false);
@@ -41,9 +43,9 @@ public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder
     }
 
 
-
-    public class ViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ExpandableTextView mTextView;
+
         public ViewHolder(View v) {
             super(v);
             v.setOnClickListener(this);
@@ -52,7 +54,9 @@ public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder
 
         @Override
         public void onClick(View v) {
-            listener.onItemClick(v,getPosition());
+            if (listener != null) {
+                listener.onItemClick(v, getPosition());
+            }
 
         }
     }

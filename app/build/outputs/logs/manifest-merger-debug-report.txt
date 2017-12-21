@@ -1,0 +1,149 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:2:1-68:12
+	package
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:3:5-31
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:6:5-84
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:6:22-81
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:9:22-64
+application
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:10:5-66:19
+MERGED from [com.android.support:recyclerview-v7:21.0.0] /Users/didi/.android/build-cache/6f4e3399c95b769ea2a5312fc3db99f172a816af/output/AndroidManifest.xml:17:5-19:19
+MERGED from [com.android.support:appcompat-v7:21.0.0] /Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/AndroidManifest.xml:16:5-19
+MERGED from [com.android.support:support-v4:21.0.3] /Users/didi/.android/build-cache/a710a439a27eb2218957a2fb4b1e84838b009148/output/AndroidManifest.xml:16:5-19
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:13:9-43
+	android:theme
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:15:9-40
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:11:9-47
+activity#net.runningcoder.activity.MainActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:18:13-56
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:17:13-50
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:22:27-74
+activity#net.runningcoder.activity.ExpandTextViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:25:9-28:61
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:28:13-58
+	android:exported
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:26:13-60
+activity#net.runningcoder.activity.TVListActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:29:9-32:20
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:31:13-58
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:30:13-52
+activity#net.runningcoder.activity.TagGroupViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:33:9-36:20
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:35:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:34:13-58
+activity#net.runningcoder.activity.CircleProgressViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:37:9-39:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:39:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:38:13-64
+activity#net.runningcoder.activity.CircleImageViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:40:9-42:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:42:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:41:13-61
+activity#net.runningcoder.activity.AudioBarActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:43:9-45:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:45:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:44:13-54
+activity#net.runningcoder.activity.ScratchCardActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:46:9-48:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:48:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:47:13-57
+activity#net.runningcoder.activity.TipsViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:49:9-51:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:51:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:50:13-54
+activity#net.runningcoder.activity.PopWindowActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:53:9-55:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:55:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:54:13-55
+activity#net.runningcoder.activity.CheckboxActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:57:9-59:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:59:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:58:13-54
+activity#net.runningcoder.activity.RecycleViewActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:60:9-62:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:62:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:61:13-57
+activity#net.runningcoder.activity.AccessibilityEventActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:63:9-65:58
+	android:label
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:65:13-55
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:64:13-64
+uses-sdk
+INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:recyclerview-v7:21.0.0] /Users/didi/.android/build-cache/6f4e3399c95b769ea2a5312fc3db99f172a816af/output/AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:appcompat-v7:21.0.0] /Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/AndroidManifest.xml:15:5-42
+MERGED from [com.android.support:support-v4:21.0.3] /Users/didi/.android/build-cache/a710a439a27eb2218957a2fb4b1e84838b009148/output/AndroidManifest.xml:15:5-42
+	android:targetSdkVersion
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
+activity#android.support.v7.widget.TestActivity
+ADDED from [com.android.support:recyclerview-v7:21.0.0] /Users/didi/.android/build-cache/6f4e3399c95b769ea2a5312fc3db99f172a816af/output/AndroidManifest.xml:18:9-115
+	android:label
+		ADDED from [com.android.support:recyclerview-v7:21.0.0] /Users/didi/.android/build-cache/6f4e3399c95b769ea2a5312fc3db99f172a816af/output/AndroidManifest.xml:18:19-59
+	android:name
+		ADDED from [com.android.support:recyclerview-v7:21.0.0] /Users/didi/.android/build-cache/6f4e3399c95b769ea2a5312fc3db99f172a816af/output/AndroidManifest.xml:18:60-113

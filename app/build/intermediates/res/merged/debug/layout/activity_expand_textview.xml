@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right">
+
+    <net.runningcoder.widget.ExpandableTextView
+        android:id="@+id/v_expandable_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="right"
+        app:lines="3"
+        app:expandDrawable="@drawable/icon_expand"
+        app:collapseDrawable="@drawable/icon_collapse"
+        app:text="View定义了绘图的基本操作
+基本操作由三个函数完成：measure()、layout()、draw()，其内部又分别包含了onMeasure()、onLayout()、onDraw()三个子方法
+（1）onMeasure()，视图大小的将在这里最终确定，也就是说measure只是对onMeasure的一个包装，子类可以覆写onMeasure()方法实现自己的计算视图大小的方式，
+并通过setMeasuredDimension(width, height)保存计算结果。"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+[
+    {
+        "outputFile": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v19/values-v19.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 9,
+                    "endColumn": 24,
+                    "endOffset": 455
+                },
+                "from": {
+                    "file": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/values-v19/attrs_circle_progress.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 4,
+                        "startOffset": 16,
+                        "endLine": 8,
+                        "endColumn": 24,
+                        "endOffset": 419
+                    }
+                }
+            }
+        ]
+    }
+]

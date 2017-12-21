@@ -63,11 +63,39 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 		new TipsView.Builder()
 				.with(this)
 				.color(android.R.color.holo_green_light)
+				.setTitleColor(android.R.color.holo_red_light)
+				.setContentColor(android.R.color.holo_purple)
+				.borderColor(android.R.color.holo_red_dark)
+				.borderWidth(2f)
+				.radius(5)
 				.title("箭头向上 build")
+				.icon(android.R.drawable.stat_notify_error)
 				.position(TriangleView.PosStrategy.ANCHOR_CENTER)
 				.width(WindowManager.LayoutParams.MATCH_PARENT)
+				.rate(0.9)
 				.content(((TextView)v).getText().toString())
 				.direction(TriangleView.Direction.UP)
+				.setOnClickListener(new TipsView.OnTipClickListener() {
+					@Override
+					public void onClick(TipsView view) {
+						view.dismiss();
+					}
+				})
+				.build()
+				.show(v);
+
+		new TipsView.Builder()
+				.with(this)
+//				.position(TriangleView.PosStrategy.ANCHOR_CENTER)
+//				.width(WindowManager.LayoutParams.MATCH_PARENT)
+				.borderColor(android.R.color.holo_red_dark)
+				.borderWidth(2f)
+				.radius(5)
+				.icon(android.R.drawable.ic_dialog_info)
+				.color(R.color.default_reached_color)
+				.title("箭头向下 build")
+				.content("测试内容，，，，，")
+				.direction(TriangleView.Direction.DOWN)
 				.setOnClickListener(new TipsView.OnTipClickListener() {
 					@Override
 					public void onClick(TipsView view) {
@@ -83,6 +111,10 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 				.with(this)
 //				.position(TriangleView.PosStrategy.ANCHOR_CENTER)
 //				.width(WindowManager.LayoutParams.MATCH_PARENT)
+				.borderColor(android.R.color.holo_red_dark)
+				.borderWidth(2f)
+				.radius(5)
+				.icon(android.R.drawable.ic_dialog_info)
 				.color(R.color.default_reached_color)
 				.title("箭头向下 build")
 				.content(((TextView)v).getText().toString())
@@ -100,9 +132,12 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 	private void showLeftTips(View v) {
 		new TipsView.Builder()
 				.with(this)
+				.borderColor(android.R.color.holo_red_dark)
+				.borderWidth(2f)
+				.radius(5)
 				.color(android.R.color.holo_blue_light)
 				.title("箭头向左 build")
-				.width(500)
+//				.width(500)
 				.content(((TextView)v).getText().toString())
 				.direction(TriangleView.Direction.LEFT)
 				.setOnClickListener(new TipsView.OnTipClickListener() {
@@ -118,6 +153,9 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 	private void showRightTips(View v) {
 		new TipsView.Builder()
 				.with(this)
+				.borderColor(android.R.color.holo_red_dark)
+				.borderWidth(2f)
+				.radius(5)
 				.color(R.color.default_reached_color)
 				.title("箭头向右 build")
 				.content(((TextView)v).getText().toString())

@@ -1,1 +1,1 @@
-include ':app', ':tipsview'
+include ':app'

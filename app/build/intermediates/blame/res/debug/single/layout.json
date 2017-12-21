@@ -1,0 +1,194 @@
+[
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_popwindow.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_popwindow.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/tooltip_textview.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/tooltip_textview.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/item_radio.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/item_radio.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_include.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_activity_chooser_view_include.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_simple_dropdown_hint.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/layout_tips_view.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/layout_tips_view.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_scratch.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_scratch.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/menu_list_item.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/menu_list_item.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/layout_base.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/layout_base.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_circle_imageview.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_circle_imageview.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_audio_bar.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_audio_bar.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_accessibility_test.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_accessibility_test.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_tips_view.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_tips_view.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/fragment_image.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/fragment_image.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_circle_progress.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_circle_progress.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_checkbox.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_checkbox.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_expand_textview.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_expand_textview.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/item_main.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/item_main.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/item_tvlist.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/item_tvlist.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_tvlist.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_tvlist.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/popwindowlayout.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/popwindowlayout.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_taggroup.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_taggroup.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_recycleview.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_recycleview.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/popup_menu.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/popup_menu.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/popwindowlayout_full.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/popwindowlayout_full.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/toolbar.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/toolbar.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    }
+]

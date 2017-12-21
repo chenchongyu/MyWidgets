@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="---------自定义标签----------"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="可以自定义背景颜色、文字颜色；可以自定义每个标签的横向间距、纵向间距；(标签动画效果需要开启animateLayoutChanges)"
+        android:textSize="12sp"/>
+
+    <net.runningcoder.widget.TagGroupView
+        android:id="@+id/v_tagview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="right"
+        android:animateLayoutChanges="true"
+        app:tagTextColor="@android:color/white"
+        app:tagTextSize="18sp"
+        app:tagBackground="@android:color/holo_blue_light"
+        />
+
+    <Button android:id="@+id/v_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.runningcoder"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="20" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="net.runningcoder.RunningCodeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="net.runningcoder.activity.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.runningcoder.activity.ExpandTextViewActivity"
+            android:exported="false"
+            android:label="@string/v_expandable_textview" />
+        <activity
+            android:name="net.runningcoder.activity.TVListActivity"
+            android:label="@string/title_activity_tvlist" >
+        </activity>
+        <activity
+            android:name="net.runningcoder.activity.TagGroupViewActivity"
+            android:label="@string/title_activity_tag" >
+        </activity>
+        <activity
+            android:name="net.runningcoder.activity.CircleProgressViewActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.CircleImageViewActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.AudioBarActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.ScratchCardActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.TipsViewActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.PopWindowActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.CheckboxActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.RecycleViewActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="net.runningcoder.activity.AccessibilityEventActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name="android.support.v7.widget.TestActivity"
+            android:label="RecyclerViewTestActivity" />
+    </application>
+
+</manifest>

@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- 往SDCard写入数据权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".RunningCodeApplication"
         android:allowBackup="true"
@@ -48,6 +48,20 @@
             android:label="@string/title_activity_tag" />
         <activity
             android:name=".activity.TipsViewActivity"
+            android:label="@string/title_activity_tag" />
+
+        <activity
+            android:name=".activity.PopWindowActivity"
+            android:label="@string/title_activity_tag" />
+
+        <activity
+            android:name=".activity.CheckboxActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name=".activity.ViewPagerActivity"
+            android:label="@string/title_activity_tag" />
+        <activity
+            android:name=".activity.AccessibilityEventActivity"
             android:label="@string/title_activity_tag" />
     </application>
 
