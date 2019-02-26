@@ -6,15 +6,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import net.runningcoder.R;
+import net.runningcoder.adapter.helper.AdapterItemOp;
 import net.runningcoder.listener.OnItemClickForRecycler;
 import net.runningcoder.widget.ExpandableTextView;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Created by Administrator on 2015/9/16.
  */
-public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder> {
+public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder> implements AdapterItemOp {
 
     private List<String> list;
     public OnItemClickForRecycler listener;
@@ -40,6 +42,17 @@ public class TVListAdapter extends RecyclerView.Adapter<TVListAdapter.ViewHolder
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    @Override
+    public void onItemMove(int from, int to) {
+        notifyItemMoved(from, to);
+        Collections.swap(list, from, to);
+    }
+
+    @Override
+    public void onItemDelete(int position) {
+
     }
 
 

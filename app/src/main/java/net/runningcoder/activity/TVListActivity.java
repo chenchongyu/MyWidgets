@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
 import net.runningcoder.BasicActivity;
 import net.runningcoder.R;
 import net.runningcoder.adapter.TVListAdapter;
+import net.runningcoder.adapter.helper.ItemTouchCallback;
 import net.runningcoder.listener.OnItemClickForRecycler;
 
 import java.util.ArrayList;
@@ -40,6 +42,9 @@ public class TVListActivity extends BasicActivity {
         });
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        ItemTouchCallback itemTouchCallback = new ItemTouchCallback(adapter);
+        ItemTouchHelper helper = new ItemTouchHelper(itemTouchCallback);
+        helper.attachToRecyclerView(recyclerView);
 
     }
 
