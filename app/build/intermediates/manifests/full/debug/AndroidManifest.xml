@@ -71,6 +71,8 @@
         <activity
             android:name="net.runningcoder.activity.TranslateTextViewActivity"
             android:label="@string/title_activity_tag" />
+        <activity android:name="net.runningcoder.activity.recyclerview.RecyclerMainActivity" />
+        <activity android:name="net.runningcoder.activity.recyclerview.RecyclerTestAct" />
 
         <meta-data
             android:name="android.support.VERSION"

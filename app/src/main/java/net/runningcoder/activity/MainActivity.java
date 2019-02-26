@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import net.runningcoder.BasicActivity;
 import net.runningcoder.R;
+import net.runningcoder.activity.recyclerview.RecyclerMainActivity;
 import net.runningcoder.adapter.MainAdapter;
 import net.runningcoder.bean.WidgetItem;
 import net.runningcoder.listener.OnItemClickForRecycler;
@@ -53,7 +54,8 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
             new WidgetItem(10, "checkbox", "checkbox"),
             new WidgetItem(11, "viewpager", "viewpager"),
             new WidgetItem(12, "无障碍检测", "check111box"),
-            new WidgetItem(13, "替换内容", "textview")
+            new WidgetItem(13, "替换内容", "textview"),
+            new WidgetItem(14, "recyclerView专项", "recyclerView")
     };
 
     Handler handler = new Handler() {
@@ -227,6 +229,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 13:
                 intent = new Intent(this, TranslateTextViewActivity.class);
+                break;
+            case 14:
+                intent = new Intent(this, RecyclerMainActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

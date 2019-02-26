@@ -56,6 +56,10 @@
         "source": "/Users/didi/.android/build-cache/fc6e58a51d785eccf47165479622a8e1b96c95b8/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/activity_recycler_main.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/activity_recycler_main.xml"
+    },
+    {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
         "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/layout/abc_screen_content_include.xml"
     },
@@ -250,6 +254,10 @@
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/popwindowlayout_full.xml",
         "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/popwindowlayout_full.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/small_image.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/layout/small_image.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",

@@ -3,17 +3,15 @@ package net.runningcoder.adapter.helper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import net.runningcoder.adapter.TVListAdapter;
-
 /**
  * Author： chenchongyu
  * Date: 2019/2/26
  * Description:
  */
 public class ItemTouchCallback extends ItemTouchHelper.SimpleCallback {
-    private TVListAdapter mAdapter;
+    private AdapterItemOp mAdapter;
 
-    public ItemTouchCallback(TVListAdapter mAdapter) {
+    public ItemTouchCallback(AdapterItemOp mAdapter) {
         super(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
         this.mAdapter = mAdapter;

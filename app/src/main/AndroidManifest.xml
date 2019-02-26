@@ -66,6 +66,8 @@
         <activity
             android:name=".activity.TranslateTextViewActivity"
             android:label="@string/title_activity_tag" />
+        <activity android:name=".activity.recyclerview.RecyclerMainActivity"/>
+        <activity android:name=".activity.recyclerview.RecyclerTestAct"/>
     </application>
 
 </manifest>

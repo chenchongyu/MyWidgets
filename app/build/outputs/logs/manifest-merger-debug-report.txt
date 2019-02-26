@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:2:1-71:12
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:2:1-73:12
 	package
 		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
@@ -26,16 +26,16 @@ ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
 	android:name
 		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:9:22-64
 application
-ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:10:5-69:19
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:10:5-71:19
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/didi/.android/build-cache/c06a54047da21e02a32f5ddd264758479c0c2ebb/output/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-v4:26.1.0] /Users/didi/.android/build-cache/6ba5c1319d9ab550c8bfd865c744ee2b959650d5/output/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-media-compat:26.1.0] /Users/didi/.android/build-cache/80a643cc70aa905f7a38b9911ce536ee51f4f45c/output/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-fragment:26.1.0] /Users/didi/.android/build-cache/e4322a94259f6da4932662441c8c25b34a742381/output/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-core-ui:26.1.0] /Users/didi/.android/build-cache/759ea553d68bde2ff4b123b59e5cba865baa8957/output/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-compat:26.1.0] /Users/didi/.android/build-cache/fc6e58a51d785eccf47165479622a8e1b96c95b8/output/AndroidManifest.xml:25:5-29:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/didi/.android/build-cache/b7d4f63dd79b74c0ccdd7c17ebdfd277d13be178/output/AndroidManifest.xml:24:5-28:19
 	android:label
@@ -144,17 +144,25 @@ ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml
 		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:68:13-55
 	android:name
 		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:67:13-63
+activity#net.runningcoder.activity.recyclerview.RecyclerMainActivity
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:69:9-79
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:69:19-77
+activity#net.runningcoder.activity.recyclerview.RecyclerTestAct
+ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:70:9-74
+	android:name
+		ADDED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml:70:19-72
 uses-sdk
 INJECTED from /Users/didi/StudioProjects/MyWidgets/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:recyclerview-v7:26.1.0] /Users/didi/.android/build-cache/c06a54047da21e02a32f5ddd264758479c0c2ebb/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.1.0] /Users/didi/.android/build-cache/6ba5c1319d9ab550c8bfd865c744ee2b959650d5/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-media-compat:26.1.0] /Users/didi/.android/build-cache/80a643cc70aa905f7a38b9911ce536ee51f4f45c/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-fragment:26.1.0] /Users/didi/.android/build-cache/e4322a94259f6da4932662441c8c25b34a742381/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-core-ui:26.1.0] /Users/didi/.android/build-cache/759ea553d68bde2ff4b123b59e5cba865baa8957/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.1.0] /Users/didi/.android/build-cache/fc6e58a51d785eccf47165479622a8e1b96c95b8/output/AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/didi/.android/build-cache/b7d4f63dd79b74c0ccdd7c17ebdfd277d13be178/output/AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
@@ -168,13 +176,13 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/didi/.android/build-ca
 meta-data#android.support.VERSION
 ADDED from [com.android.support:recyclerview-v7:26.1.0] /Users/didi/.android/build-cache/c06a54047da21e02a32f5ddd264758479c0c2ebb/output/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-v4:26.1.0] /Users/didi/.android/build-cache/6ba5c1319d9ab550c8bfd865c744ee2b959650d5/output/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-media-compat:26.1.0] /Users/didi/.android/build-cache/80a643cc70aa905f7a38b9911ce536ee51f4f45c/output/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-fragment:26.1.0] /Users/didi/.android/build-cache/e4322a94259f6da4932662441c8c25b34a742381/output/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] /Users/didi/.android/build-cache/66a02acb57cd04dce9f0d3938f1bc151a1c3c667/output/AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] /Users/didi/.android/build-cache/5fe159004ee35622c5c18bb2cb443f9cfe1f955f/output/AndroidManifest.xml:23:9-25:38
 MERGED from [com.android.support:support-core-ui:26.1.0] /Users/didi/.android/build-cache/759ea553d68bde2ff4b123b59e5cba865baa8957/output/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/didi/.android/build-cache/b0372910253057d789567c050dd91dd999124109/output/AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:support-compat:26.1.0] /Users/didi/.android/build-cache/fc6e58a51d785eccf47165479622a8e1b96c95b8/output/AndroidManifest.xml:26:9-28:38
 	android:value
 		ADDED from [com.android.support:recyclerview-v7:26.1.0] /Users/didi/.android/build-cache/c06a54047da21e02a32f5ddd264758479c0c2ebb/output/AndroidManifest.xml:25:13-35
