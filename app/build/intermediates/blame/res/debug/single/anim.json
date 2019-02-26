@@ -5,35 +5,67 @@
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_slide_out_bottom.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_slide_in_top.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/bts_raw_home_dynamic_first.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/anim/bts_raw_home_dynamic_first.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/tooltip_exit.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_slide_out_top.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/bts_raw_home_dynamic_second.xml",
+        "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/anim/bts_raw_home_dynamic_second.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_fade_in.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_fade_out.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/grow_fade_in_from_bottom.xml",
         "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/anim/grow_fade_in_from_bottom.xml"
     },
     {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_popup_exit.xml"
+    },
+    {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/popshow_anim.xml",
         "source": "/Users/didi/StudioProjects/MyWidgets/app/src/main/res/anim/popshow_anim.xml"
     },
     {
+        "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_popup_enter.xml"
+    },
+    {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/anim/abc_slide_in_bottom.xml"
+        "source": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/anim/abc_slide_in_bottom.xml"
     },
     {
         "merged": "/Users/didi/StudioProjects/MyWidgets/app/build/intermediates/res/merged/debug/anim/pophidden_anim.xml",

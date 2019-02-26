@@ -46,6 +46,22 @@
         />
 
     <Button
+        android:id="@+id/v_dropdown_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:text="dropdown"
+        />
+    <Button
+        android:id="@+id/v_dropdown_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:text="dropdown但是空间不足"
+        />
+    <Button
         android:id="@+id/v_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

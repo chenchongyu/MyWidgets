@@ -63,6 +63,9 @@
         <activity
             android:name=".activity.AccessibilityEventActivity"
             android:label="@string/title_activity_tag" />
+        <activity
+            android:name=".activity.TranslateTextViewActivity"
+            android:label="@string/title_activity_tag" />
     </application>
 
 </manifest>

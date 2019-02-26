@@ -7,7 +7,7 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
-public abstract class BasicActivity extends ActionBarActivity {
+public abstract class BasicActivity extends FragmentActivity {
 	public static final String ACTION_EXIT = RunningCodeApplication.getInstance().getPackageName() + ".EXIT";
 	public TextView baseTitle;//返回
 	public LinearLayout baseHome;
@@ -75,7 +75,7 @@ public abstract class BasicActivity extends ActionBarActivity {
 	public void baseInitActionBar() {
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
 		if (toolbar != null) {
-			setSupportActionBar(toolbar);
+//			setSupportActionBar(toolbar);
 			tintManager=new SystemBarTintManager(this);
 			setStatusBarColor(R.color.colorPrimaryDark);
 			tintManager.setStatusBarTintEnabled(true);

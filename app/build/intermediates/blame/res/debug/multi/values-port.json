@@ -11,13 +11,13 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/didi/.android/build-cache/65374ea5e5ab5e24a58ca4a3e84f10523408a8af/output/res/values-port/values.xml",
+                    "file": "/Users/didi/.android/build-cache/85c7e39ad58998dc23f39a2c9e4c892bd5a062d6/output/res/values-port/values-port.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 56,
+                        "startOffset": 55,
                         "endColumn": 55,
-                        "endOffset": 107
+                        "endOffset": 106
                     }
                 }
             }

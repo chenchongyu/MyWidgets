@@ -17,10 +17,13 @@ import net.runningcoder.R;
 import net.runningcoder.adapter.MainAdapter;
 import net.runningcoder.bean.WidgetItem;
 import net.runningcoder.listener.OnItemClickForRecycler;
+import net.runningcoder.util.L;
 import net.runningcoder.widget.AlphaButton;
 import net.runningcoder.widget.ListViewItemProgress;
 import net.runningcoder.widget.PopupMenu;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -49,7 +52,8 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
             new WidgetItem(9, "popupWindow", "popupWindow"),
             new WidgetItem(10, "checkbox", "checkbox"),
             new WidgetItem(11, "viewpager", "viewpager"),
-            new WidgetItem(12, "无障碍检测", "check111box")
+            new WidgetItem(12, "无障碍检测", "check111box"),
+            new WidgetItem(13, "替换内容", "textview")
     };
 
     Handler handler = new Handler() {
@@ -68,6 +72,20 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
         super.onCreate(savedInstanceState);
         initView();
         initData();
+//        readOtherFile();
+    }
+
+    private void readOtherFile() {
+        File file = new File("/storage/emulated/0/Android/data/com.sdu.didi.psnger/cache/test.txt");
+
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        L.i(file.getAbsolutePath() + ":" + file.length());
     }
 
     private void initData() {
@@ -206,6 +224,9 @@ public class MainActivity extends BasicActivity implements OnItemClickForRecycle
                 break;
             case 12:
                 intent = new Intent(this, AccessibilityEventActivity.class);
+                break;
+            case 13:
+                intent = new Intent(this, TranslateTextViewActivity.class);
                 break;
         }
         intent.putExtra("title", item.name);

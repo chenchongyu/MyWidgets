@@ -21,4 +21,25 @@
 并通过setMeasuredDimension(width, height)保存计算结果。"
         />
 
+
+    <TextView
+        android:id="@+id/v_textview"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="测试内容"
+        android:maxLines="1"
+        android:layout_below="@+id/v_expandable_textview"
+        android:autoSizeTextType="uniform"
+        />
+
+    <net.runningcoder.widget.AutoSizeTextView
+        android:id="@+id/v_textview2"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:text="测试内容"
+        android:layout_below="@+id/v_textview"
+        />
 </RelativeLayout>
