@@ -29,4 +29,15 @@ public class RecyclerMainActivity extends BasicActivity {
         intent.putExtra("type", 1);
         startActivity(intent);
     }
+
+    public void onPinClick(View view){
+        Intent intent = new Intent(this, RecyclerPinHeaderAct.class);
+        startActivity(intent);
+    }
+
+    public void onAnimateClick(View view){
+        Intent intent = new Intent(this, RecyclerAnimateAct.class);
+        startActivity(intent);
+    }
+
 }

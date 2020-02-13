@@ -8,4 +8,6 @@
     <dimen name="ttlm_default_stroke_weight">0dip</dimen>
     <dimen name="ttlm_default_elevation">2dp</dimen>
 
+    <dimen name="group_height">40dp</dimen>
+
 </resources>

@@ -26,4 +26,28 @@
         android:onClick="onViewPagerClick"
         android:text="模仿viewpager"
         />
+
+    <TextView
+        android:id="@+id/tv_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_rect_blue_fill_bg"
+        android:padding="10dp"
+        android:gravity="center"
+        android:onClick="onPinClick"
+        android:text="悬停"
+        />
+
+    <TextView
+        android:id="@+id/tv_animate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_rect_blue_fill_bg"
+        android:padding="10dp"
+        android:gravity="center"
+        android:onClick="onAnimateClick"
+        android:text="动画"
+        />
 </LinearLayout>

@@ -5,11 +5,14 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 tools:context="net.runningcoder.activity.TVListActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/v_recyclerView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/container_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            />
+    </ScrollView>
 </RelativeLayout>

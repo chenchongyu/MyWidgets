@@ -10,6 +10,7 @@ import android.text.TextUtils;
 
 import net.runningcoder.util.DateUtil;
 import net.runningcoder.util.PathUtil;
+import net.runningcoder.util.Utils;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -59,6 +60,7 @@ public class RunningCodeApplication extends Application {
     public void onCreate() {
         super.onCreate();
         PathUtil.initial(this);
+        Utils.init(this);
         CRASH_LOG = PathUtil.getInstance().getCacheRootPath("log") + "/rc_crash.log";
 //        RcExceptionHandler handler = new RcExceptionHandler();
 //        Thread.setDefaultUncaughtExceptionHandler(handler);
