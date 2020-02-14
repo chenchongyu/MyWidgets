@@ -43,7 +43,7 @@ public class TipsViewActivity extends BasicActivity implements View.OnClickListe
 
         final TextView textView = findViewById(R.id.v_btn);
 
-        String from = "北京市昌平区回龙观新龙城25 ";
+        String from = "观新龙城25 ";
         int pos = from.length();
         //预留一个空格位
         SpannableStringBuilder builder = new SpannableStringBuilder(from+" ");

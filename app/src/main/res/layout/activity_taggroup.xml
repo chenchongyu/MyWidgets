@@ -4,11 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/v_root"
     >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="---------自定义标签----------"
+        android:focusable="true"
+        android:clickable="true"
         android:gravity="center_horizontal"
         android:textSize="15sp"/>
     <TextView

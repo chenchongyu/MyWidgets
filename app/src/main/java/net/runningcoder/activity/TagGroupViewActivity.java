@@ -7,6 +7,7 @@ import android.widget.Button;
 import net.runningcoder.BasicActivity;
 import net.runningcoder.R;
 import net.runningcoder.util.L;
+import net.runningcoder.util.ViewUtils;
 import net.runningcoder.widget.TagGroupView;
 
 public class TagGroupViewActivity extends BasicActivity implements View.OnClickListener{
@@ -26,9 +27,15 @@ public class TagGroupViewActivity extends BasicActivity implements View.OnClickL
 		setActionBarColor(android.R.color.holo_orange_dark);
 		setStatusBarColor(android.R.color.holo_orange_light);
 
+		findViewById(R.id.v_root).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ViewUtils.showToast(getApplicationContext(),"点击了");
+			}
+		});
 		tagGroup = (TagGroupView) findViewById(R.id.v_tagview);
-		btn = (Button) findViewById(R.id.v_btn);
-		btn.setOnClickListener(this);
+//		btn = (Button) findViewById(R.id.v_btn);
+//		btn.setOnClickListener(this);
 
 	}
 
